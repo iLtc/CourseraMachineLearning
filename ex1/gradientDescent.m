@@ -17,11 +17,11 @@ for iter = 1:num_iters
     %       of the cost function (computeCost) and gradient here.
     %
 
+    middle = X * theta - y;
 
-
-
-
-
+    for j = 1: length(theta)
+        theta(j) = theta(j) - alpha / m * sum(middle' * X(:, j));
+    end;
 
     % ============================================================
 
